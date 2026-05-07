@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew Bliss Cafe</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:linear-gradient(135deg,#1b1b1b,#3e2723,#6d4c41);
+      color:white;
+      overflow-x:hidden;
+    }
+
+    header{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    header h1{
+      font-size:70px;
+      letter-spacing:3px;
+      margin-bottom:15px;
+      animation:fadeIn 2s ease;
+    }
+
+    header p{
+      font-size:22px;
+      color:#f5d7b2;
+      max-width:700px;
+      line-height:1.7;
+      animation:fadeIn 3s ease;
+    }
+
+    .btn{
+      margin-top:30px;
+      padding:14px 35px;
+      background:#d7a86e;
+      color:black;
+      border:none;
+      border-radius:50px;
+      font-size:18px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.4s;
+      box-shadow:0 5px 20px rgba(0,0,0,0.4);
+    }
+
+    .btn:hover{
+      transform:translateY(-5px) scale(1.05);
+      background:white;
+    }
+
+    .about{
+      width:90%;
+      margin:80px auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
+      transition:0.5s;
+    }
+
+    .about img:hover{
+      transform:scale(1.03);
+    }
+
+    .about-text{
+      background:rgba(255,255,255,0.08);
+      padding:40px;
+      border-radius:20px;
+      backdrop-filter:blur(10px);
+      box-shadow:0 8px 25px rgba(0,0,0,0.4);
+    }
+
+    .about-text h2{
+      font-size:40px;
+      margin-bottom:20px;
+      color:#ffcc80;
+    }
+
+    .about-text p{
+      line-height:2;
+      font-size:17px;
+      color:#eeeeee;
+    }
+
+    .menu-title{
+      text-align:center;
+      font-size:50px;
+      margin-top:40px;
+      margin-bottom:40px;
+      color:#ffe0b2;
+    }
+
+    .menu-container{
+      width:90%;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:35px;
+      padding-bottom:60px;
+    }
+
+    .menu-card{
+      background:rgba(255,255,255,0.1);
+      border-radius:25px;
+      overflow:hidden;
+      backdrop-filter:blur(12px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.4);
+      transition:0.5s;
+      position:relative;
+    }
+
+    .menu-card:hover{
+      transform:translateY(-12px) scale(1.03);
+      box-shadow:0 15px 35px rgba(255,204,128,0.4);
+    }
+
+    .menu-card img{
+      width:100%;
+      height:240px;
+      object-fit:cover;
+      transition:0.5s;
+    }
+
+    .menu-card:hover img{
+      transform:scale(1.1);
+    }
+
+    .menu-content{
+      padding:25px;
+      text-align:center;
+    }
+
+    .menu-content h2{
+      font-size:28px;
+      margin-bottom:12px;
+      color:#ffcc80;
+    }
+
+    .menu-content p{
+      color:#ddd;
+      line-height:1.7;
+      margin-bottom:15px;
+      font-size:15px;
+    }
+
+    .price{
+      font-size:26px;
+      font-weight:bold;
+      color:white;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:black;
+      color:#bbb;
+      font-size:16px;
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:45px;
+      }
+
+      header p{
+        font-size:18px;
+      }
+
+      .menu-title{
+        font-size:38px;
+      }
+
+      .about-text h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>☕ Brew Bliss Cafe</h1>
+    <p>
+      Experience premium handcrafted coffee, cozy ambiance,
+      and unforgettable flavors made from freshly roasted beans.
+    </p>
+
+    <button class="btn">Explore Menu</button>
+  </header>
+
+  <section class="about">
+
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" alt="Cafe Image">
+
+    <div class="about-text">
+      <h2>About Our Cafe</h2>
+
+      <p>
+        Brew Bliss Cafe is a modern coffee destination designed for coffee lovers.
+        We blend premium quality beans, elegant interiors, and relaxing vibes to create
+        the perfect coffee experience. From strong espressos to creamy caramel lattes,
+        every cup is prepared with passion and perfection.
+      </p>
+    </div>
+
+  </section>
+
+  <h1 class="menu-title">Our Special Coffee Menu</h1>
+
+  <div class="menu-container">
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a">
+      <div class="menu-content">
+        <h2>Espresso</h2>
+        <p>Classic Italian coffee with rich aroma and bold flavor.</p>
+        <div class="price">₹120</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
+      <div class="menu-content">
+        <h2>Cappuccino</h2>
+        <p>Creamy milk foam blended perfectly with espresso.</p>
+        <div class="price">₹180</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
+      <div class="menu-content">
+        <h2>Latte</h2>
+        <p>Smooth and silky coffee crafted with steamed milk.</p>
+        <div class="price">₹200</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348">
+      <div class="menu-content">
+        <h2>Mocha</h2>
+        <p>Chocolate infused coffee topped with cream.</p>
+        <div class="price">₹220</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c">
+      <div class="menu-content">
+        <h2>Americano</h2>
+        <p>Rich espresso balanced with hot water.</p>
+        <div class="price">₹170</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735">
+      <div class="menu-content">
+        <h2>Cold Coffee</h2>
+        <p>Refreshing chilled coffee with creamy texture.</p>
+        <div class="price">₹150</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814">
+      <div class="menu-content">
+        <h2>Black Coffee</h2>
+        <p>Pure bold coffee for authentic coffee lovers.</p>
+        <div class="price">₹100</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096">
+      <div class="menu-content">
+        <h2>Macchiato</h2>
+        <p>Espresso finished with rich foamed milk.</p>
+        <div class="price">₹210</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247">
+      <div class="menu-content">
+        <h2>Vanilla Latte</h2>
+        <p>Sweet vanilla flavor with creamy smooth coffee.</p>
+        <div class="price">₹230</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e">
+      <div class="menu-content">
+        <h2>Caramel Coffee</h2>
+        <p>Rich caramel syrup mixed with roasted coffee.</p>
+        <div class="price">₹240</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2026 Brew Bliss Cafe | Premium Coffee Experience
+  </footer>
+
+</body>
+</html>
